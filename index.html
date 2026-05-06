@@ -3,30 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的下载站</title>
+    <title>404 - 页面未找到</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 50px; }
-        .download-link {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: radial-gradient(circle at top, #1a1a2e 0, #16213e 40%, #0f3460 100%);
+            color: #f5f5f7;
+            text-align: center;
         }
-        .download-link:hover { background-color: #0056b3; }
+
+        .container {
+            max-width: 540px;
+            width: 100%;
+            padding: 24px 16px;
+        }
+
+        .logo {
+            max-width: 200px;
+            width: 100%;
+            margin-bottom: 12px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+
+        .title {
+            margin: 8px 0 4px;
+            font-size: 96px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            background: linear-gradient(135deg, #a8edea 0, #fed6e3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .subtitle {
+            margin: 0 0 6px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .hint {
+            margin: 0 0 24px;
+            font-size: 14px;
+            color: #a3a3b5;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #1f2937;
+            box-shadow: rgba(0,0,0,0.25) 0 2px 8px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: rgba(0,0,0,0.35) 0 4px 12px;
+            background: #f9fafb;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 1.5px solid rgba(255,255,255,0.8);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-1px);
+            background: rgba(255,255,255,0.12);
+            border-color: #ffffff;
+        }
+
+        .muted {
+            margin-top: 32px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .muted a {
+            color: #a3a3b5;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
     </style>
 </head>
 <body>
-    <h1>欢迎来到我的下载站</h1>
-    
-    <!-- 注意：这里的链接是占位符，稍后会替换成你自己的代理链接 -->
-    <p>请点击下面的链接进行下载：</p>
-    <a href="https://你的自定义域名/download/https://raw.githubusercontent.com/你的用户名/你的用户名.github.io/main/resources/你的文件.zip" class="download-link">
-        下载 [你的文件名称]
-    </a>
-    
+    <div class="container">
+        <img src="404.png" alt="404" class="logo">
+        <div class="title">404</div>
+        <p class="subtitle">啊哦，页面走丢了</p>
+        <p class="hint">您访问的页面不存在或已被移除，请返回首页或查看文档。</p>
+
+        <div class="buttons">
+            <a href="https://th-dd.top" class="btn btn-primary">返回个人主页</a>
+            <a href="https://docs.th-dd.top" class="btn btn-secondary">查看文档站</a>
+        </div>
+
+        <p class="muted">如持续遇到问题，请尝试清除缓存或联系站长。<br>网址：<a href="https://th-dd.top">th-dd.top</a> · <a href="https://docs.th-dd.top">docs.th-dd.top</a></p>
+    </div>
 </body>
 </html>
